@@ -8,7 +8,7 @@
     {
       "type": "amazon-ebs",
       "name": "HVM AMI builder",
-      "region": "ap-suoth-1",
+      "region": "ap-south-1",
       "source_ami": "ami-84e3b2eb",
       "instance_type": "t2.micro",
       "ssh_username": "ubuntu",
