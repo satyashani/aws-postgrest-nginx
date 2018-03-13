@@ -1,0 +1,16 @@
+version: "1.0"
+
+provisioner:
+   type: Packer
+   template: postgrest.json
+   flavor: ubuntu1604
+        
+metadata:
+  maintainer: yespoho
+  description: yespoho.com
+  operating_system_name: Ubuntu
+  operating_system_version: 16.04
+  programming_language_name: JavaScript
+  programming_language_version: 8.0
+  framework_name: Postgrest
+  framework_version: 4.4

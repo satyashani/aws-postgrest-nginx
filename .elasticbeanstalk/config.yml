@@ -1,0 +1,22 @@
+branch-defaults:
+  dev:
+    environment: eb-custom-platform-builder-packer
+  master:
+    environment: yp-pgrest-qa
+environment-defaults:
+  yp-pgrest-qa:
+    branch: null
+    repository: null
+global:
+  application_name: Custom Platform Builder
+  branch: null
+  default_ec2_keyname: null
+  default_platform: null
+  default_region: ap-south-1
+  instance_profile: aws-elasticbeanstalk-custom-platform-ec2-role
+  platform_name: yespoho-postgrest
+  platform_version: 1.0.2
+  profile: frfserver
+  repository: null
+  sc: git
+  workspace_type: Platform

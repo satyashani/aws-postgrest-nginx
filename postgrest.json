@@ -1,0 +1,33 @@
+{
+  "variables": {
+    "platform_name": "{{env `AWS_EB_PLATFORM_NAME`}}",
+    "platform_version": "{{env `AWS_EB_PLATFORM_VERSION`}}",
+    "platform_arn": "{{env `AWS_EB_PLATFORM_ARN`}}"
+  },
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "name": "HVM AMI builder",
+      "region": "ap-suoth-1",
+      "source_ami": "ami-84e3b2eb",
+      "instance_type": "t2.micro",
+      "ssh_username": "ubuntu",
+      "ssh_pty": "true",
+      "ami_name": "Postgrest with Nginx",
+      "tags": {
+        "eb_platform_name": "{{user `platform_name`}}",
+        "eb_platform_version": "{{user `platform_version`}}",
+        "eb_platform_arn": "{{user `platform_arn`}}"
+      }
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo {{ .Path }}",
+      "scripts": [
+        "build-platform.sh"
+      ]
+    }
+  ]
+}
