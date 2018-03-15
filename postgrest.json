@@ -13,7 +13,7 @@
       "instance_type": "t2.micro",
       "ssh_username": "ubuntu",
       "ssh_pty": "true",
-      "ami_name": "Postgrest with Nginx",
+      "ami_name": "Postgrest with Nginx on Ubuntu 16.04",
       "tags": {
         "eb_platform_name": "{{user `platform_name`}}",
         "eb_platform_version": "{{user `platform_version`}}",
@@ -23,10 +23,15 @@
   ],
   "provisioners": [
     {
+      "type": "file",
+      "source": "builder",
+      "destination": "/tmp/"
+    },
+    {
       "type": "shell",
       "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo {{ .Path }}",
       "scripts": [
-        "build-platform.sh"
+        "builder/builder.sh"
       ]
     }
   ]
