@@ -16,7 +16,7 @@ mkdir -p $BEANSTALK_DIR/deploy/appsource/
 mkdir -p /var/app/staging
 mkdir -p /var/app/current
 
-apt-get install -y git 
+sudo apt-get install -y git 
 
 ## WRITE NODE_DIR TO CONFIG ON INSTANCE TO BE AVAILABLE FOR HOOKS
 mkdir -p $CONTAINER_CONFIG_FILE_DIR

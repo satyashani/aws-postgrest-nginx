@@ -15,7 +15,7 @@ global:
   default_region: ap-south-1
   instance_profile: aws-elasticbeanstalk-custom-platform-ec2-role
   platform_name: yespoho-postgrest
-  platform_version: 1.0.9
+  platform_version: 1.0.10
   profile: frfserver
   repository: null
   sc: git

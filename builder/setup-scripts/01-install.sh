@@ -21,7 +21,7 @@ sudo add-apt-repository -y "deb http://openresty.org/package/ubuntu $(lsb_releas
 sudo echo "deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main" >  /etc/apt/sources.list.d/pgdg.list
 
 #Install
-sudo apt-get update
+sudo apt-get update -y
 sudo apt-get install -y openresty awscli unzip git
 sudo apt-get install -y golang-go openjdk-8* libpq5 libpq-dev
-sudo apt-get install postgresql-9.6
+sudo apt-get install -y postgresql-9.6
