@@ -14,4 +14,4 @@
 rm -rf $LIVE_DIR
 mv $STAGING_DIR $LIVE_DIR
 cd $LIVE_DIR
-
+rm -rf $STAGING_DIR/.ebextensions
